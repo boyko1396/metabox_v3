@@ -1,10 +1,10 @@
 .hero {
-  background: url(../images/hero-bg.jpg) center top no-repeat;
-  background-size: cover;
+  background: url(../images/hero-bg.jpg) center bottom / cover no-repeat;
   color: $whiteColor;
   position: relative;
   overflow: hidden;
   &__container {
+    min-height: 100vh;
     padding-top: 72rem;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     }
   }
   &__title {
-    margin: 0 0 607rem;
+    margin: 0 0 140rem;
     padding-bottom: 12rem;
     line-height: 1.12;
     position: relative;
@@ -28,22 +28,24 @@
     }
   }
   &__main {
-    padding-bottom: 152rem;
-    flex-grow: 1;
+    margin-top: auto;
+    padding-bottom: 132rem;
     position: relative;
     z-index: 0;
     @media (max-width: $md) {
-      padding-bottom: 48vw;
-    }
-    @media (max-width: $xs) {
-      padding-bottom: 64vw;
+      padding-bottom: 50rem;
     }
   }
   &__hero {
+    @media (max-width: $md) {
+      margin: 0 0 -10rem;
+      text-align: center;
+    }
     img {
       width: 100%;
-      max-width: 962rem;
+      height: calc(100vh - 180rem);
       margin: 0 auto;
+      display: block;
       position: absolute;
       right: 0;
       bottom: 0;
@@ -56,10 +58,12 @@
       z-index: -1;
       @media (max-width: $lg) {
         max-width: 70%;
+        height: auto;
       }
       @media (max-width: $md) {
         max-width: 50%;
         max-height: initial;
+        position: relative;
         transform: none;
       }
       @media (max-width: $sm) {
