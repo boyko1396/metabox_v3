@@ -399,6 +399,9 @@
       height: 100rem;
       top: -30rem;
       left: 68rem;
+      @media (max-width: $lg) {
+        left: 20rem;
+      }
     }
     &:after {
       background-image: url(../images/fly-2.png);
@@ -412,7 +415,6 @@
     }
     &-subtitle {
       background: rgba($blue4Color, .1);
-      backdrop-filter: blur(10rem);
       margin: 0 0 30rem;
       padding: 21rem 80rem;
       font-weight: normal;
@@ -422,7 +424,11 @@
       border: 1rem solid $whiteColor;
       box-shadow: 0 4rem 4rem rgba($blackColor, .25);
       overflow: hidden;
+      @media (min-width: $lg-mf) {
+        backdrop-filter: blur(10rem);
+      }
       @media (max-width: $lg) {
+        background: #dde8ff;
         padding: 15rem 30rem;
       }
       &:not(:last-child) {
