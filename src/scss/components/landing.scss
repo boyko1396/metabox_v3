@@ -258,10 +258,10 @@
     }
     &:nth-child(3) {
       width: 100%;
-      top: 49%;
+      top: 48%;
+      right: -5%;
       @media (max-width: $lg) {
         margin: 0 auto;
-        right: 0;
         right: 0;
       }
       @media (max-width: $xs) {
