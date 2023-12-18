@@ -40,7 +40,7 @@
   }
   &__hero {
     @media (max-width: $md) {
-      margin: 0 0 -10rem;
+      margin: 0 -80rem -10rem;
       text-align: center;
     }
     img {
@@ -63,16 +63,10 @@
         height: auto;
       }
       @media (max-width: $md) {
-        max-width: 50%;
+        max-width: 100%;
         max-height: initial;
         position: relative;
         transform: none;
-      }
-      @media (max-width: $sm) {
-        max-width: 60%;
-      }
-      @media (max-width: $xs) {
-        max-width: 80%;
       }
     }
   }
@@ -91,19 +85,25 @@
     @media (max-width: $lg) {
     }
     @media (max-width: $md) {
-      max-width: 640rem;
+      max-width: 480rem;
       margin: 0 auto;
       align-items: center;
       flex-direction: column;
+    }
+    @media (max-width: $sm) {
+      max-width: 390rem;
+    }
+    @media (max-width: $xs) {
+      max-width: 100%;
     }
     &-btn {
       min-width: 394rem;
       flex-shrink: 0;
       @media (max-width: $md) {
+        width: 100%;
         margin: 0;
       }
       @media (max-width: $xs) {
-        width: 100%;
         min-width: 0;
       }
     }
@@ -421,6 +421,7 @@
       color: $black1Color;
       border: 1rem solid $whiteColor;
       box-shadow: 0 4rem 4rem rgba($blackColor, .25);
+      overflow: hidden;
       @media (max-width: $lg) {
         padding: 15rem 30rem;
       }
