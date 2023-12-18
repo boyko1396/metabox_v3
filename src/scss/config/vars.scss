@@ -1,0 +1,86 @@
+$siteResolution: 1px;
+$mainFont: 'Manrope';
+$accentFont: 'Onest';
+$mainWeight: 400;
+$lineHeightMedium: 1.22;
+$lineHeightTitle: 1.22;
+$lineHeightDefault: $lineHeightMedium;
+
+$containerWidth: 1206rem;
+
+$whiteColor: #fff;
+$blackColor: #000;
+$black1Color: #2C2C2C;
+$black3Color: #05102c;
+$blue1Color: #0041A9;
+$blue2Color: #0025A9;
+$blue3Color: #4697FF;
+$blue4Color: #484FFF;
+$blue5Color: #10162D;
+$blue6Color: #B5CBE8;
+$blue7Color: #EEF9FF;
+$blue8Color: #64C3FD;
+$blue9Color: #789EE3;
+
+$fontFamily: $mainFont, sans-serif;
+$fontColor: $blackColor;
+$fontWeight: $mainWeight;
+$accentColor: $blue1Color;
+
+$gradientBg1: linear-gradient(91deg, rgba(0,38,173, 0.26) 10.25%, rgba(0,125,211, .26) 89.52%);
+
+$shadowBox1: 3px 10px 9px 0 rgba($blackColor, .2);
+
+$borderRadiusMd: 30rem;
+$borderRadiusLg: 50rem;
+
+$transition: all .4s 0ms;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs;
+
+:root {
+  --fs-default: 20rem;
+  --fs-1: 50rem;
+  --fs-2: 40rem;
+  --fs-3: 25rem;
+  --fs-4: 22rem;
+  --fs-5: 20rem;
+  --fs-6: 18rem;
+  --fs-7: 16rem;
+  --offset: 15rem;
+  --offset-: 15rem;
+  --gap: 15rem;
+  --gap-: -15rem;
+  --gap-fluid: 30rem;
+  --gap-fluid-: -30rem;
+  @media (max-width: $lg) {
+    --fs-default: 18rem;
+  }
+  @media (max-width: $md) {
+    --fs-default: 14rem;
+    --fs-1: 40rem;
+    --fs-2: 30rem;
+    --fs-3: 20rem;
+    --fs-4: 18rem;
+    --fs-5: 16rem;
+    --fs-6: 14rem;
+    --fs-7: 14rem;
+  }
+  @media (max-width: $sm) {
+    --fs-1: 24rem;
+    --fs-2: 22rem;
+    --fs-3: 18rem;
+    --gap-fluid: 20rem;
+    --gap-fluid-: -20rem;
+  }
+}
