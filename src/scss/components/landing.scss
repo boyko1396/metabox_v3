@@ -34,6 +34,8 @@
     z-index: 0;
     @media (max-width: $md) {
       padding-bottom: 50rem;
+      display: flex;
+      flex-grow: 1;
     }
   }
   &__hero {
@@ -77,6 +79,9 @@
   &__main-footer {
     max-width: 1040rem;
     margin: 0 auto;
+    @media (max-width: $md) {
+      display: flex;
+    }
   }
   &__main-group {
     margin: 0 var(--gap-);
@@ -109,7 +114,8 @@
       text-align: right;
       @media (max-width: $md) {
         width: 100%;
-        margin: 0 0 60rem;
+        margin: 0 0 auto;
+        padding-bottom: 60rem;
         text-align: center;
         text-shadow: 0 1rem 1rem rgba($blackColor, .6);
         order: -1;
