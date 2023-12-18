@@ -49,6 +49,7 @@
       box-shadow: 0 4px 4px rgba($blackColor, .25), -4px -5px 6px rgba($whiteColor, .25);
       &:hover {
         @media (min-width: $lg-mf) {
+          background: $blue1Color;
         }
       }
     }
@@ -60,6 +61,8 @@
       box-shadow: 0 4px 4px rgba($blackColor, .25), -4px -5px 6px rgba($whiteColor, .25);
       &:hover {
         @media (min-width: $lg-mf) {
+          background: $blue1Color;
+          color: $whiteColor;
         }
       }
     }
