@@ -11,6 +11,9 @@
     @media (max-width: $lg) {
       padding-top: 60rem;
     }
+    @media (max-width: $sm) {
+      padding-top: 40rem;
+    }
   }
   &__title {
     margin: 0 0 140rem;
@@ -19,7 +22,7 @@
     position: relative;
     z-index: 1;
     @media (max-width: $md) {
-      margin-bottom: 20rem;
+      margin-bottom: 15rem;
     }
     @media (max-width: $sm) {
     }
@@ -115,7 +118,7 @@
       @media (max-width: $md) {
         width: 100%;
         margin: 0 0 auto;
-        padding-bottom: 60rem;
+        padding-bottom: 30rem;
         text-align: center;
         text-shadow: 0 1rem 1rem rgba($blackColor, .6);
         order: -1;
