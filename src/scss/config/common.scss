@@ -66,8 +66,30 @@
         }
       }
     }
+    &-accent-gradient {
+      background: linear-gradient(90deg, #68BCFB -2.41%, #5630FF 49%, #3DA3F8 98.11%);
+      background-size: 100% 100%;
+      font-weight: bold;
+      color: $whiteColor;
+      border-radius: 5rem;
+      text-transform: uppercase;
+      &:hover {
+        @media (min-width: $lg-mf) {
+          background-size: 240% 100%;
+        }
+      }
+    }
   }
   &--size {
+    &-sm {
+      --btn-height: 60rem;
+      --btn-padding-x: 24rem;
+      --btn-padding-y: 10rem;
+      --btn-font-size: var(--fs-7);
+      @media (max-width: $md) {
+        --btn-height: 52rem;
+      }
+    }
     &-md {
       --btn-height: 88rem;
       --btn-padding-x: 64rem;
@@ -485,12 +507,12 @@
     &:before {
       background: linear-gradient(126deg, rgba(72, 79, 255, 0.10) -0.4%, rgba(255, 255, 255, 0.09) 45.01%, rgba(72, 79, 255, 0.10) 86.67%);
       backdrop-filter: blur(5rem);
-      width: 100%;
-      height: 100%;
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      left: 1rem;
       border-radius: $borderRadiusLg;
       border: 1rem solid $whiteColor;
       box-shadow: 0 4rem 4rem rgba($blackColor, .25);
