@@ -624,7 +624,7 @@
     }
   }
   &__subtitle {
-    margin: 0 0 111rem;
+    margin: 0 0 130rem;
     font-weight: bold;
     font-size: var(--fs-5);
     text-align: center;
@@ -772,6 +772,9 @@
         font-size: var(--fs-7);
         line-height: 1.4;
         letter-spacing: .04em;
+        @media (max-width: $sm) {
+          min-height: 0;
+        }
       }
       &-btns {
       }
