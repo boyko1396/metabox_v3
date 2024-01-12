@@ -2,10 +2,11 @@
 
 .u-link {
   transition: $transition;
+
   &:hover {
     text-decoration: none;
-    @media (min-width: $lg-mf) {
-    }
+
+    @media (min-width: $lg-mf) {}
   }
 }
 
@@ -32,14 +33,17 @@
   position: relative;
   cursor: pointer;
   z-index: 0;
+
   &:hover {
     text-decoration: none;
   }
+
   &.disabled,
   &:disabled {
     opacity: .6;
     pointer-events: none;
   }
+
   &--theme {
     &-accent {
       background: $blue2Color;
@@ -47,18 +51,21 @@
       color: $whiteColor;
       border-radius: 50rem;
       box-shadow: 0 4rem 4rem rgba($blackColor, .25), -4rem -5rem 6rem rgba($whiteColor, .25);
+
       &:hover {
         @media (min-width: $lg-mf) {
           background: $blue1Color;
         }
       }
     }
+
     &-white {
       background: $whiteColor;
       font-weight: bold;
       color: $blackColor;
       border-radius: 50rem;
       box-shadow: 0 4rem 4rem rgba($blackColor, .25), -4rem -5rem 6rem rgba($whiteColor, .25);
+
       &:hover {
         @media (min-width: $lg-mf) {
           background: $blue1Color;
@@ -66,13 +73,32 @@
         }
       }
     }
+
     &-accent-gradient {
       background: linear-gradient(90deg, #68BCFB -2.41%, #5630FF 49%, #3DA3F8 98.11%);
       background-size: 100% 100%;
       font-weight: bold;
       color: $whiteColor;
-      border-radius: 5rem;
+      border-radius: 40rem;
       text-transform: uppercase;
+
+      &.robo {
+        background: linear-gradient(15deg, #3b4d5b 1.41%, #babbf4 49%, #3DA3F8 98.11%);
+        background-size: 100% 100%;
+        font-weight: bold;
+        color: $whiteColor;
+        border-radius: 5rem;
+        text-transform: uppercase;
+
+        &:hover {
+          transition: background-size .3s;
+
+          @media (min-width: $lg-mf) {
+            background-size: 240% 100%;
+          }
+        }
+      }
+
       &:hover {
         @media (min-width: $lg-mf) {
           background-size: 240% 100%;
@@ -80,21 +106,25 @@
       }
     }
   }
+
   &--size {
     &-sm {
       --btn-height: 60rem;
       --btn-padding-x: 24rem;
       --btn-padding-y: 10rem;
       --btn-font-size: var(--fs-7);
+
       @media (max-width: $md) {
         --btn-height: 52rem;
       }
     }
+
     &-md {
       --btn-height: 88rem;
       --btn-padding-x: 64rem;
       --btn-padding-y: 16rem;
       --btn-font-size: var(--fs-4);
+
       @media (max-width: $md) {
         --btn-height: 78rem;
         --btn-padding-x: 20rem;
@@ -102,6 +132,7 @@
       }
     }
   }
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -110,21 +141,25 @@
     pointer-events: none;
     z-index: 1;
   }
-  &__title {
-  }
+
+  &__title {}
 }
 
 .content {
   line-height: 1.22;
+
   > :first-child {
     margin-top: 0;
   }
+
   > :last-child {
     margin-bottom: 0;
   }
+
   p {
     margin: 0 0 1em;
   }
+
   a {
     @extend .u-link;
   }
@@ -149,6 +184,7 @@
   letter-spacing: .04em;
   position: relative;
   z-index: 0;
+
   &:before {
     background: $gradientBg1;
     backdrop-filter: blur(5rem);
@@ -162,6 +198,7 @@
     border-radius: $borderRadiusMd;
     transform: skewX(-30deg);
     z-index: -1;
+
     @media (max-width: $lg) {
       border-radius: $borderRadiusMd;
       transform: skewX(-15deg);
@@ -174,6 +211,7 @@
   height: 15rem;
   border-radius: 0 0 70rem;
   position: relative;
+
   &__value {
     background: linear-gradient(268deg, #2CACE3 -3.05%, #3EBFF6 -3.04%, #3705FF 51.71%, #6ADAFF 102.08%);
     width: var(--range-value);
@@ -183,6 +221,7 @@
     left: 0;
     border-radius: 5rem;
     box-shadow: 0 2rem 4rem rgba(#47E9FF, .6);
+
     &:after {
       background: url(../images/icons/range-carret.svg) 50% no-repeat;
       background-size: contain;
@@ -205,8 +244,8 @@
     line-height: 1.3;
     color: $blue8Color;
   }
-  &__slider-u-range {
-  }
+
+  &__slider-u-range {}
 }
 
 .u-section-title {
@@ -218,6 +257,7 @@
 .meta-card {
   position: relative;
   z-index: 0;
+
   &__inner {
     background: rgba($blue4Color, .10);
     backdrop-filter: blur(8rem);
@@ -226,13 +266,16 @@
     border: 1rem solid $whiteColor;
     box-shadow: 0 4rem 4rem rgba($blackColor, .25);
     position: relative;
+
     @media (max-width: $lg) {
       padding: 36rem 32rem 26rem;
     }
+
     @media (max-width: $md) {
       padding: 30rem 30rem 60rem;
     }
   }
+
   &__counter {
     @extend .title;
     margin: 0 0 10rem;
@@ -243,10 +286,12 @@
     right: 26rem;
     pointer-events: none;
     z-index: -1;
+
     &:before {
       content: counter(metaCardCounter);
     }
   }
+
   &__title {
     min-height: 3.9em;
     margin: 0 0 15rem;
@@ -256,21 +301,26 @@
     line-height: 1.3;
     letter-spacing: .05em;
     text-transform: uppercase;
+
     @media (max-width: $md) {
       margin-bottom: 10rem;
       min-height: 0;
     }
   }
+
   &__text {
     margin: 0 0 8rem;
     line-height: 1.35;
+
     p {
       margin: 0 0 1.4em;
+
       @media (max-width: $md) {
         margin-bottom: 1em;
       }
     }
   }
+
   &__picture {
     width: 76rem;
     height: 76rem;
@@ -280,12 +330,14 @@
     user-select: none;
     pointer-events: none;
     z-index: -1;
+
     @media (max-width: $md) {
       width: 70rem;
       height: 70rem;
       right: 10rem;
       bottom: 10rem;
     }
+
     img {
       width: 100%;
       height: 100%;
@@ -300,26 +352,31 @@
   backdrop-filter: blur(2rem);
   padding: 26rem 38rem;
   color: $black1Color;
-  box-shadow: 3rem 10rem 9rem  rgba($blackColor, .20);
+  box-shadow: 3rem 10rem 9rem rgba($blackColor, .20);
   border-radius: $borderRadiusLg;
+
   @media (max-width: $lg) {
     padding: 24rem;
   }
+
   @media (max-width: $xs) {
     padding: 20rem;
     border-radius: 40rem;
   }
+
   &__picture {
     @extend %img-cover;
     width: 108rem;
     height: 108rem;
     margin: -80rem auto 18rem;
+
     @media (max-width: $lg) {
       width: 84rem;
       height: 84rem;
       margin: -65rem auto 10rem;
     }
   }
+
   &__suptitle {
     @extend .title-size-3;
     margin: 9rem 0;
@@ -328,6 +385,7 @@
     text-transform: uppercase;
     letter-spacing: 0;
   }
+
   &__title {
     margin: 0 0 2rem;
     font-weight: bold;
@@ -336,9 +394,11 @@
     text-transform: uppercase;
     letter-spacing: 0;
   }
+
   &__text {
     line-height: 1.35;
   }
+
   &__list {
     margin: 20rem 0 20rem 22rem;
     line-height: 1.35;
@@ -346,81 +406,99 @@
 }
 
 .expert-slider {
-  &__el {
-  }
-  &__slide {
-  }
+  &__el {}
+
+  &__slide {}
+
   &__card {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
     @media (max-width: $md) {
       max-width: 600rem;
       margin: 0 auto;
       flex-direction: column;
       align-items: center;
     }
+
     &-media {
       margin: 0 1% 0 -78rem;
       flex: 0 0 39%;
+      align-self: flex-end;
       position: relative;
       z-index: 0;
+
       @media (max-width: $md) {
         max-width: 200rem;
         margin: 0 0 -10rem;
+        align-self: initial;
         z-index: -1;
       }
     }
+
     &-picture {
       user-select: none;
       pointer-events: none;
       position: relative;
+
       img {
         width: 100%;
         height: auto;
         display: block;
       }
     }
+
     &-content {
       padding: 0 0 190rem 10rem;
       flex-grow: 1;
+
       @media (max-width: $md) {
         width: 100%;
         padding: 0;
       }
     }
+
     &-name {
       margin: 0 0 12rem;
       text-transform: uppercase;
     }
+
     &-title {
       margin: 0 0 31rem;
       text-transform: uppercase;
     }
+
     &-text {
       max-width: 680rem;
       margin: 0 0 40rem;
       font-weight: 600;
       font-size: var(--fs-4);
       color: $blue8Color;
+
       ul {
         margin-left: 33rem;
+
         @media (max-width: $md) {
           margin-left: 24rem;
         }
       }
     }
+
     &-skill-list {
       max-width: 640rem;
       margin: 0 0 0 22rem;
+
       @media (max-width: $md) {
         max-width: 100%;
         margin-left: 0;
         padding-bottom: 15rem;
       }
+
       &-card {
         &:not(:last-child) {
           margin-bottom: 29rem;
+
           @media (max-width: $md) {
             margin-bottom: 20rem;
           }
@@ -428,6 +506,7 @@
       }
     }
   }
+
   .swiper-pagination {
     margin-left: -13rem;
     display: flex;
@@ -437,12 +516,14 @@
     bottom: 96rem;
     left: 40%;
     z-index: 1;
+
     @media (max-width: $md) {
       margin: 0;
       justify-content: center;
       bottom: 0;
       left: 0;
     }
+
     .swiper-pagination-bullet {
       background: transparent;
       width: 22rem;
@@ -453,6 +534,7 @@
       border-radius: 50%;
       cursor: pointer;
       position: relative;
+
       &:hover {
         @media (min-width: $lg-mf) {
           &:after {
@@ -460,6 +542,7 @@
           }
         }
       }
+
       &:after {
         background: transparent;
         width: 14rem;
@@ -472,6 +555,7 @@
         border-radius: inherit;
         transition: all .4s;
       }
+
       &:before {
         content: '';
         border-radius: inherit;
@@ -482,6 +566,7 @@
         left: -6rem;
       }
     }
+
     .swiper-pagination-bullet-active {
       &:after {
         background: $accentColor;
@@ -491,19 +576,21 @@
 }
 
 .reviews-slider {
-  &__el {
-  }
-  &__slide {
-  }
+  &__el {}
+
+  &__slide {}
+
   &__item {
     padding: 40rem;
     font-size: var(--fs-default);
     position: relative;
     z-index: 0;
+
     @media (max-width: $sm) {
       padding: 20rem;
       border-radius: 30rem;
     }
+
     &:before {
       background: linear-gradient(126deg, rgba(72, 79, 255, 0.10) -0.4%, rgba(255, 255, 255, 0.09) 45.01%, rgba(72, 79, 255, 0.10) 86.67%);
       backdrop-filter: blur(5rem);
@@ -518,6 +605,7 @@
       box-shadow: 0 4rem 4rem rgba($blackColor, .25);
       z-index: -1;
     }
+
     &:after {
       background: url(../images/warning.png) 50% / contain no-repeat;
       width: 188rem;
@@ -530,32 +618,48 @@
       transform: translate(-50%, -50%);
       transition: all .4s;
       z-index: -2;
-      @media (max-width: $lg) {
-        display: none;
-      }
+
+      // @media (max-width: $lg) {
+      //   display: none;
+      // }
     }
   }
+
   &__text {
+    border-radius: 30rem;
     position: relative;
     z-index: 0;
     transition: all .4s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 90%;
+
+      max-height: 60vh;
+      border-radius: 30rem;
+    }
   }
+
   &:not(.is-show) {
-    @media (min-width: $lg-mf) {
+    // @media (min-width: $lg-mf) {
       .reviews-slider__text {
         opacity: 0;
         visibility: hidden;
       }
-    }
+    // }
   }
+
   &.is-show {
-    @media (min-width: $lg-mf) {
+    // @media (min-width: $lg-mf) {
       .reviews-slider__item {
         &:after {
           opacity: 0;
           visibility: hidden;
         }
-      }
+      // }
     }
   }
 }
@@ -567,9 +671,11 @@
   border: 1rem solid #8CB8FF;
   padding: 30rem;
   border-radius: 9rem;
+
   @media (max-width: $sm) {
     padding: 20rem;
   }
+
   &__header {
     margin: -30rem;
     padding: 24rem 54rem 24rem 30rem;
@@ -579,22 +685,26 @@
     position: relative;
     transition: all .34s;
     transition-property: opacity;
+
     @media (max-width: $sm) {
       margin: -20rem;
       padding: 14rem 24rem 14rem 20rem;
     }
+
     &:hover {
       @media (min-width: $lg-mf) {
         opacity: .6;
       }
     }
   }
+
   &__btn {
     @extend %btn-reset;
     color: inherit;
     border-radius: 9rem;
     cursor: pointer;
     position: static;
+
     &:before {
       width: 100%;
       height: 100%;
@@ -604,6 +714,7 @@
       left: 0;
     }
   }
+
   &__title {
     margin: 0 15rem 0 0;
     font-weight: bold;
@@ -612,6 +723,7 @@
     text-align: left;
     letter-spacing: 0;
   }
+
   &__icon {
     width: 28rem;
     height: 28rem;
@@ -619,23 +731,28 @@
     color: #51CEFE;
     transition: all .34s;
     transition-property: transform;
+
     @media (max-width: $sm) {
       width: 20rem;
       height: 20rem;
     }
   }
+
   &.is-show &__icon {
     transform: rotate(45deg);
   }
+
   &__content {
     max-width: 606rem;
     padding: 30rem 0 0;
     font-size: var(--fs-6);
     line-height: 1.31;
+
     @media (max-width: $sm) {
       padding-top: 20rem;
     }
   }
+
   &:not(.is-show) &__content {
     display: none;
   }
