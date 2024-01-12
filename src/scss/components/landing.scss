@@ -10,12 +10,15 @@
     height: 100%;
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: -1;
     @media (max-width: $md) {
       background-position: right -6px top !important;
-      backdrop-filter: blur(4px);
+      width: 106%;
+      height: 106%;
+      filter: blur(2px);
     }
   }
 
